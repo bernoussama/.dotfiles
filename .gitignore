@@ -1,1 +1,4 @@
-/.git
+.oh-my-zsh/*/.git
+*/.git
+**/.git
+.git
