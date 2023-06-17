@@ -1,0 +1,5 @@
+#!/bin/bash
+git push
+git add .
+git commit -m"auto pushed"
+git push
