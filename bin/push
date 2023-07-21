@@ -1,5 +1,11 @@
 #!/bin/bash
+<<<<<<< HEAD
 git push
 git add .
 git commit -m"auto pushed"
 git push
+=======
+git add .
+git commit -m "$1" || git commit -m "update"
+git push 
+>>>>>>> 588d3ba (add submodules)

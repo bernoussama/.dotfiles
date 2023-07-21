@@ -124,6 +124,7 @@ alias pf="ps -e | grep $1"
 
 # activate a given python venv
 activenv() {
+<<<<<<< HEAD
 # source $1/bin/activate;  # commented out by conda initialize
 }
 alias lla="ls -la"
@@ -165,3 +166,8 @@ function nvims() {
 
 bindkey -s ^a "nvims\n"
 
+=======
+  source $1/bin/activate;
+}
+alias lla="ls -la"
+>>>>>>> 588d3ba (add submodules)

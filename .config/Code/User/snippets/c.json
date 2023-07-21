@@ -1,0 +1,35 @@
+{
+  "function description": {
+    "prefix": "/**",
+    "body": [
+      "/**",
+      " * ${1:func_name} - ${2: description}",
+      " * @${3:param}: $4",
+      " *",
+      " * Return: ${5:return_value}",
+      "*/"
+    ],
+    "description": "function description",
+    "luasnip": {
+      "priority": 2000,
+      "autotrigger": true,
+      "wordTrig": false
+    }
+  },
+  "header boilerplate": {
+    "prefix": "header",
+    "body": [
+      "#ifndef ${1:HEADER_H}",
+      "#define $1",
+      "${2:prototypes}",
+      "#endif",
+      ""
+    ],
+    "description": "function description",
+    "luasnip": {
+      "priority": 2000,
+      "autotrigger": true,
+      "wordTrig": false
+    }
+  }
+}

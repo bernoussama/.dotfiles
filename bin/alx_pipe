@@ -1,0 +1,22 @@
+#!/bin/env bash
+
+betty-style "$@"
+
+if [ $? -eq 0 ]; then
+    betty-doc "$@"
+else 
+    echo "betty-style failed"
+fi
+
+if [ $? -eq 0 ]; then
+    gcc -Wall -pedantic -Werror -Wextra -std=gnu89 "$@" -o "${1%.c}"
+else
+    echo "betty-doc failed"
+fi
+
+
+if [ $? -eq 0 ]; then
+    echo "pipeline succeeded"
+else
+    echo "compilation failed"
+fi
