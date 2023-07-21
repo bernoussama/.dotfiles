@@ -7,7 +7,7 @@ brew_install(){
 
 nala_install(){
     echo "installing $* using nala ..."
-    nala install "$@"
+    nala install -y "$@"
 }
 
 echo 'installing nala ...'
@@ -23,7 +23,7 @@ echo 'adding it to path...'
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 echo 'installing build-essential ...'
-sudo apt-get install build-essential
+sudo apt-get install -y build-essential
 
 brew_install gcc
 
@@ -40,7 +40,35 @@ git clone git@github.com:0ussamaBernou/.dotfiles.git ~/.dotfiles --depth 1
 cd ~/.dotfiles || exit
 stow .
 
+#install minicona
 cd ~ || exit
 wget https://repo.anaconda.com/miniconda/Miniconda3-py311_23.5.2-0-Linux-x86_64.sh
 chmod +x ./Miniconda3*
-./Miniconda3-py311_23.5.2-0Linux-x86_64
+./Miniconda3-py311_23.5.2-0Linux-x86_64.sh
+
+#install docker
+for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
+
+sudo apt-get update
+sudo apt-get install -y ca-certificates curl gnupg
+
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# docker postinstall
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+docker run hello-world
+sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+sudo chmod g+rwx "$HOME/.docker" -R
