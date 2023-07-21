@@ -1,0 +1,46 @@
+#!/bin/bash
+
+brew_install(){
+    echo "installing $* using brew ..."
+    brew install "$@"
+}
+
+nala_install(){
+    echo "installing $* using nala ..."
+    nala install "$@"
+}
+
+echo 'installing nala ...'
+apt install nala
+
+nala_install zsh zsh-doc tldr stow zoxide ripgrep fzf vim kitty git python3.11 python3.11-venv curl wget
+
+# installing brew
+echo 'installing linux brew...'
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'adding it to path...'
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/oussama/.profile
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+echo 'installing build-essential ...'
+sudo apt-get install build-essential
+
+brew_install gcc
+
+brew_install neovim tmux gh
+
+
+echo 'changing default shell to zsh ...'
+chsh -s "$(which zsh)"
+
+gh auth login
+
+mkdir ~/.dotfiles
+git clone git@github.com:0ussamaBernou/.dotfiles.git ~/.dotfiles --depth 1
+cd ~/.dotfiles || exit
+stow .
+
+cd ~ || exit
+wget https://repo.anaconda.com/miniconda/Miniconda3-py311_23.5.2-0-Linux-x86_64.sh
+chmod +x ./Miniconda3*
+./Miniconda3-py311_23.5.2-0Linux-x86_64

@@ -1,0 +1,2 @@
+#!/bin/env bash
+ docker run -w /root -it --rm alpine:latest sh -uelic 'apk add git nodejs neovim ripgrep build-base'

@@ -124,28 +124,14 @@ alias pf="ps -e | grep $1"
 
 # activate a given python venv
 activenv() {
-<<<<<<< HEAD
-# source $1/bin/activate;  # commented out by conda initialize
+# source $1/bin/activate;  # commented out by conda initialize  # commented out by conda initialize
 }
+
 alias lla="ls -la"
 alias clip="xclip -sel clip"
 alias reload="omz reload"
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/oussama/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/oussama/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/oussama/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/oussama/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
 alias nvim-kick="NVIM_APPNAME=kickstart nvim"
@@ -166,8 +152,19 @@ function nvims() {
 
 bindkey -s ^a "nvims\n"
 
-=======
-  source $1/bin/activate;
-}
-alias lla="ls -la"
->>>>>>> 588d3ba (add submodules)
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/oussama/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/oussama/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/oussama/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/oussama/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
