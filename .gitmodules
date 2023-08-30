@@ -1,6 +1,9 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
-	url = git@github.com:0ussamaBernou/NvChad.git
+	url = git@github.com:0ussamaBernou/init.lua.git
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
