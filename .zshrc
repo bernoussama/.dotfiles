@@ -130,6 +130,7 @@ activenv() {
 alias lla="ls -la"
 alias clip="xclip -sel clip"
 alias reload="omz reload"
+alias gicko="git checkout"
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 
@@ -153,7 +154,7 @@ function nvims() {
   NVIM_APPNAME=$config nvim $@
 }
 
-bindkey -s ^a "nvims\n"
+# bindkey -s ^a "nvims\n"
 
 
 # >>> conda initialize >>>
