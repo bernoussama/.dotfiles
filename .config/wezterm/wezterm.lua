@@ -11,9 +11,9 @@ return {
 	-- 	hue = 1.0,
 	-- 	saturation = 0.5,
 	-- },
-	window_background_opacity = 0.88,
+	window_background_opacity = 0.8,
 	-- window_background_opacity = 1.0,
-	-- window_decorations = 'NONE',
+	window_decorations = "NONE",
 	keys = {
 		{
 			key = "f",

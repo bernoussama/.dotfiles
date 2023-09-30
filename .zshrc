@@ -2,11 +2,11 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=/usr/bin:/bin:$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
+export PATH=/usr/local/go/bin:/usr/bin:/bin:$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -124,7 +124,7 @@ alias pf="ps -e | grep $1"
 
 # activate a given python venv
 activenv() {
-# source $1/bin/activate;  # commented out by conda initialize  # commented out by conda initialize
+    # source $1/bin/activate;  # commented out by conda initialize  # commented out by conda initialize
 }
 
 alias lla="ls -la"
@@ -143,15 +143,15 @@ eval $(thefuck --alias)
 eval "$(navi widget zsh)"
 
 function nvims() {
-  items=("default" "kickstart" "LazyVim" "NvChad" "AstroNvim")
-  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
-  if [[ -z $config ]]; then
-    echo "Nothing selected"
-    return 0
-  elif [[ $config == "default" ]]; then
-    config=""
-  fi
-  NVIM_APPNAME=$config nvim $@
+    items=("default" "kickstart" "LazyVim" "NvChad" "AstroNvim")
+    config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+    if [[ -z $config ]]; then
+        echo "Nothing selected"
+        return 0
+    elif [[ $config == "default" ]]; then
+        config=""
+    fi
+    NVIM_APPNAME=$config nvim $@
 }
 
 # bindkey -s ^a "nvims\n"
@@ -171,4 +171,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-

@@ -1,0 +1,8 @@
+#!/bin/env bash
+
+ver=$1
+cd $HOME/Downloads || exit
+url="https://go.dev/dl/go$ver.linux-amd64.tar.gz"
+wget "$url"
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"
+export PATH=$PATH:/usr/local/go/bin
