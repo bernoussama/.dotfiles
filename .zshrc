@@ -1,3 +1,5 @@
+# Print banner
+cat ~/.banner
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -7,6 +9,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 export PATH=/usr/local/go/bin:/usr/bin:/bin:$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
+
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -171,3 +174,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/oussama/.profile
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
