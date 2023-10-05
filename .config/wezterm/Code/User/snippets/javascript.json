@@ -1,0 +1,22 @@
+{
+  "Print to console": {
+    "prefix": "log",
+    "body": ["console.log('$1');", "$2"],
+    "description": "Log output to console"
+  },
+  "query selector": {
+    "prefix": "query",
+    "body": ["const ${1:variable} = document.querySelector('${2;selector}')"],
+    "description": "Add a query selector"
+  },
+  "add eventListener": {
+    "prefix": "addEventListener",
+    "body": ["${1:variable}.addEventListener('${2:type}',($3)=>{$4})"],
+    "description": "Add a query selector"
+  },
+  "Pure Function": {
+    "prefix": "const",
+    "body": ["const ${1:func} = (${2:parameter}) => $3"],
+    "description": "Add a query selector"
+  }
+}

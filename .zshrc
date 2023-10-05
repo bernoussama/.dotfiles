@@ -142,6 +142,9 @@ alias nvim-kick="NVIM_APPNAME=kickstart nvim"
 alias nvim-chad="NVIM_APPNAME=NvChad nvim"
 alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
 
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/oussama/.profile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
 eval $(thefuck --alias)
 eval "$(navi widget zsh)"
 
@@ -174,5 +177,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/oussama/.profile
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
