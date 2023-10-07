@@ -1,6 +1,0 @@
-2023-10-07 15:12:24.331 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-dotnettools.dotnet-interactive-vscode' wants API proposal 'languageConfigurationAutoClosingPairs' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
-2023-10-07 15:12:24.341 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'github.copilot-chat' wants API proposal 'terminalContextMenu' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
-2023-10-07 15:12:24.627 [info] Started initializing default profile extensions in extensions installation folder. file:///home/oussama/.vscode/extensions
-2023-10-07 15:12:25.133 [warning] Failed to create default profile extensions manifest in extensions installation folder. file:///home/oussama/.vscode/extensions Unable to create file 'vscode-userdata:/home/oussama/.vscode/extensions/extensions.json' that already exists when overwrite flag is not set
-2023-10-07 15:12:25.133 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/oussama/.vscode/extensions
-2023-10-07 15:12:27.708 [info] [perf] Render performance baseline is 29ms

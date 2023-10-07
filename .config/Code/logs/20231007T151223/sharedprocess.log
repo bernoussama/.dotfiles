@@ -1,9 +1,0 @@
-2023-10-07 15:12:24.975 [info] Started initializing default profile extensions in extensions installation folder. file:///home/oussama/.vscode/extensions
-2023-10-07 15:12:25.107 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/oussama/.vscode/extensions
-2023-10-07 15:12:25.205 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/oussama/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/oussama/.vscode/extensions/extensions.json.vsctmp'
-    at s.create (/nix/store/fif77l9kmm94hj96wq7bqxaw6f0gjc2q-vscode-1.83.0/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30209)
-    at i (/nix/store/fif77l9kmm94hj96wq7bqxaw6f0gjc2q-vscode-1.83.0/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30329)
-    at t.eb (/nix/store/fif77l9kmm94hj96wq7bqxaw6f0gjc2q-vscode-1.83.0/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:35625)
-    at t.stat (/nix/store/fif77l9kmm94hj96wq7bqxaw6f0gjc2q-vscode-1.83.0/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:28201)
-    at async w.stat (/nix/store/fif77l9kmm94hj96wq7bqxaw6f0gjc2q-vscode-1.83.0/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:15579)
-    at async Q.tb (/nix/store/fif77l9kmm94hj96wq7bqxaw6f0gjc2q-vscode-1.83.0/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:109:9514)
