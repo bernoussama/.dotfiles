@@ -124,6 +124,8 @@ alias zshrc="v ~/.zshrc"
 eval "$(zoxide init zsh)"
 alias update="sudo nala update && sudo nala upgrade"
 alias pf="ps -e | grep $1"
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 # alias python="python3.11"
 
 # activate a given python venv
