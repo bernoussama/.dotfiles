@@ -7,6 +7,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export BAT_THEME="gruvbox-dark"
 # If you come from bash you might have to change your $PATH.
 export PATH=/usr/local/go/bin:/usr/bin:/bin:$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
@@ -114,6 +115,7 @@ alias zshconfig="nvim ~/.zshrc"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias v="nvim"
 alias apt="nala"
+alias sudo apt="sudo nala"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -180,3 +182,14 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# bun completions
+[ -s "/home/oussama/.bun/_bun" ] && source "/home/oussama/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# deno
+export DENO_INSTALL="/home/oussama/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
