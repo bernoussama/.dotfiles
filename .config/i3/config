@@ -1,0 +1,18 @@
+# Author:       Arszilla
+# Github:       https://github.com/Arszilla
+# Gitlab:       https://gitlab.com/Arszilla
+# Twitter:      https://twitter.com/Arszilla
+#
+# License:      MIT License
+# License URL:  https://gitlab.com/Arszilla/i3-dotfiles/-/blob/main/LICENSE
+#
+# i3 config
+# i3 Version: 4.22
+
+# i3 Config
+## Import configs:
+include $HOME/.config/i3/config.d/appearance.conf
+include $HOME/.config/i3/config.d/execs.conf
+include $HOME/.config/i3/config.d/gaps.conf
+include $HOME/.config/i3/config.d/keybinds.conf
+include $HOME/.config/i3/config.d/windows.conf
