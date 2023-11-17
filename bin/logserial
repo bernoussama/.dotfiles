@@ -1,0 +1,26 @@
+#!/bin/env bash
+
+# check if argument 1 is set
+if [ -n "$1" ]
+then
+    # set serial port
+    port=$1
+else
+    # set default serial port
+    port="/dev/ttyUSB0"
+fi
+
+# check if argument 2 is set
+if [ -n "$2" ]
+then
+    # set baud rate
+    baud=$2
+else
+    # set default baud rate
+    baud="9600"
+fi
+
+# set baud rate
+stty -F "$port" "$baud"
+# log serial port
+cat "$port" | tee -a ./logserial.log

@@ -193,3 +193,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # deno
 export DENO_INSTALL="/home/oussama/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+#arduino-cli completions
+[ -s "/home/oussama/_arduino-cli" ] && source "/home/oussama/_arduino-cli"
