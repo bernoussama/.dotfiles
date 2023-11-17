@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# Author:       Arszilla
+# Github:       https://github.com/Arszilla
+# Gitlab:       https://gitlab.com/Arszilla
+# Twitter:      https://twitter.com/Arszilla
+#
+# License:      MIT License
+# License URL:  https://gitlab.com/Arszilla/i3-dotfiles/-/blob/main/LICENSE
+#
+# polybar startup script
+# polybar Version: 3.6.3
+
+# Terminate already running bar instances:
+/usr/bin/polybar-msg cmd quit
+
+for monitor in $(/usr/bin/polybar -m | /usr/bin/cut -d ":" -f1); do
+    MONITOR=$monitor /usr/bin/polybar -r -q main & disown
+
+done
