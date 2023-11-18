@@ -14,7 +14,12 @@
 # Terminate already running bar instances:
 polybar-msg cmd quit
 
-for monitor in $(polybar -m | /usr/bin/cut -d ":" -f1); do
-    MONITOR=$monitor polybar -r -q main & disown
+# for monitor in $(polybar -m | /usr/bin/cut -d ":" -f1); do
+#     MONITOR=$monitor polybar -r -q main & disown
+#
+# done
+
+for monitor in $(polybar --config="~/.config/polybar/config.ini" -m | /usr/bin/cut -d ":" -f1); do
+    MONITOR=$monitor polybar --config="~/.config/polybar/config.ini" -r -q main & disown
 
 done
