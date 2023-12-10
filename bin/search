@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# locate "$1" | fzf | xargs -n 1 nvim
+locate "$1" | fzf | xclip -sel clip

@@ -196,3 +196,5 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 #arduino-cli completions
 [ -s "/home/oussama/_arduino-cli" ] && source "/home/oussama/_arduino-cli"
+#fzf config
+export FZF_DEFAULT_COMMAND='rg --hidden --ignore .git -l -g ""'
