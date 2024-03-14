@@ -25,6 +25,7 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
+
 --config.font = wezterm.font 'MesloLGL Nerd Font Mono Regular'
 config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
 config.font_size = 15.0

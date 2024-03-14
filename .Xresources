@@ -24,7 +24,7 @@
 *color14:    #28A1E2
 *color15:    #FFFFFF
 
-Xft.dpi:230
+Xft.dpi:284
 rofi.dpi: 192
 Xft.antialias: true
 Xft.hinting: true
@@ -32,4 +32,4 @@ Xft.rgba: rgb
 Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
-Xcursor.size: 64
+*Xcursor.size: 92
